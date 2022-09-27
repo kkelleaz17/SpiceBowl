@@ -42,19 +42,19 @@
 
        
         <label for="FN">First Name</label>
-        <input type="text" id="FN" name="First Name" required> 
+        <input type="text" id="FN" name="First Name" required pattern="^[A-Za-z]*{20}$" maxlength="20"> 
         <br>
         <label for="LN">Last Name</label>
-        <input id = "LN" name = "Last Name" type="text" required>
+        <input id = "LN" name = "Last Name" type="text" required pattern="^[A-Za-z]*{20}$" maxlength="20">
         <br>
         <label for="SA">Street Address</label>
-        <input id="SA" name="Street Address" type="text" required>
+        <input id="SA" name="Street Address" type="text" required pattern="[1-9][1-9][1-9][1-9][ ][a-zA-z]*{3}[ ][a-zA-z]*{15}[ ][a-zA-z]*{5}">
         <br>
         <label for="SA2">Street Address(2)</label>
-        <input id = "SA2" name="Street Address(2)" type="text">
+        <input id = "SA2" name="Street Address(2)" type="text" pattern="[1-9][1-9][1-9][1-9][ ][a-zA-z]*{3}[ ][a-zA-z]*{15}[ ][a-zA-z]*{5}">
         <br>
         <label for="city">City</label>
-        <input id="city" name = "City" type="text"required>
+        <input id="city" name = "City" type="text"required pattern="^[A-Za-z]*{20}$">
         <br>
         <label for="state">State</label>
 <select id="state" name="State">
@@ -116,36 +116,36 @@
 </select>
         <br>
         <label for="zip">Zip</label>
-        <input id="zip" name="Zip" type="text"required>
+        <input id="zip" name="Zip" type="text"required pattern="[0-9]*{5}">
         <br>
         <label for="country">Country</label>
-        <input id="country" name = "Country" type="text"required>
+        <input id="country" name = "Country" type="text"required pattern="[A-Za-z]*{25}">
         <br>
         <label for="phone">Phone Number</label>
-        <input id="phone" name="Phone Number" type="tel"required>
+        <input id="phone" name="Phone Number" type="tel"required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
         <br>
     </form>
     <h1>Credit Card(required)</h1>
     <form>
         <div class="IM">
             <img src="AmericanExpress.png">
-            <input type="radio">
+            <input type="radio" name="CARD">
             <img src="Discover.jpg">
-            <input type="radio">
+            <input type="radio" name="CARD">
             <img src="MasterCard.png">
-            <input type="radio">
+            <input type="radio" name="CARD">
             <img src="VISA.jpg">
-            <input type="radio">
+            <input type="radio" name="CARD">
         </div>
         <br>
       <label for="CD">Credit Card Number</label>
-      <input type="text" id="CD" name="Credit Card" required>
+      <input type="text" id="CD" name="Credit Card" required pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}">
       <br>
       <label for="ED">Expiration Date</label>
-      <input type="date" id="ED" name="Expiration Date" required>
+      <input type="date" id="ED" name="Expiration Date" required >
       <br>
-      <label for="CV">Expiration Date</label>
-      <input type="text" id="CV" name="CsC" required>
+      <label for="CV">CV</label>
+      <input type="text" id="CV" name="CsC" required pattern="[0-9]{3}">
       <br>
     </form>
     <button type="submit">Submit</button>
